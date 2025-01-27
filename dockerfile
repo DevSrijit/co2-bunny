@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . .
 RUN bun install
 CMD ["bun", "run", "server.js"]
-EXPOSE 3000
+EXPOSE 7865

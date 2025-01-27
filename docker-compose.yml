@@ -1,6 +1,6 @@
-FROM oven/bun:latest
-WORKDIR /app
-COPY . .
-RUN bun install
-CMD ["bun", "run", "server.js"]
-EXPOSE 7865
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "7865:7865"

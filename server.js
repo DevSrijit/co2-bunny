@@ -14,6 +14,10 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.get("/api/impact/data-transfer", async (req, res) => {
   const { url } = req.query;
   if (!url) return res.status(400).send({ error: "URL is required" });

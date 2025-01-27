@@ -12,7 +12,7 @@ model WebsiteAnalysis {
   url                String
   dataTransferKB     Float
   energyUsedKWh      Float
-  carbonEmissionsG   Float
+  carbonEmissionsG   Json
   greenHosting       Boolean
   provider           String?
   annualPageViews    Int

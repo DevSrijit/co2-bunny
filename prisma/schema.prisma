@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model WebsiteAnalysis {
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+  url                String
+  dataTransferKB     Float
+  energyUsedKWh      Float
+  carbonEmissionsG   Float
+  greenHosting       Boolean
+  provider           String?
+  annualPageViews    Int
+  carbonPerViewG     Float
+  totalAnnualEmissionsKg Float
+  createdAt          DateTime @default(now())
+}

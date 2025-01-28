@@ -2,10 +2,19 @@ import express from "express";
 import dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
 import axios from "axios";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
 const prisma = new PrismaClient();
+
+// Add CORS middleware
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://co2bunny.srijit.co'], // Add your frontend URLs
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+}));
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
@@ -15,7 +24,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.sendFile("index.html", { root: "." });
 });
 
 app.get("/api/impact/data-transfer", async (req, res) => {

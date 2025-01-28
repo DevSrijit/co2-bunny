@@ -134,7 +134,7 @@ export default function AnalyzePage() {
                                         Individual Analyses
                                     </h2>
                                     <p className="text-muted-foreground mt-2">
-                                        Detailed breakdown of your website's environmental metrics
+                                        Detailed breakdown of your website&apos;s environmental metrics
                                     </p>
                                 </div>
 

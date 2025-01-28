@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CO2 Bunny 🐰
+
+A modern web carbon footprint calculator that helps you understand and reduce your website's environmental impact.
+
+## What is CO2 Bunny?
+
+CO2 Bunny is a free tool that analyzes websites to measure their carbon emissions and environmental impact. It provides detailed insights about:
+
+- Data transfer size and efficiency
+- Energy consumption metrics
+- Carbon emissions from both renewable and grid energy sources
+- Hosting provider sustainability
+- Traffic-based environmental impact
+
+## Key Features
+
+- **Comprehensive Analysis**: Get detailed breakdowns of your website's environmental metrics
+- **Real-time Calculations**: Instant results for any public website
+- **Multiple Impact Metrics**: View impacts in terms of:
+  - Data transfer (KB)
+  - Energy usage (kWh)
+  - Carbon emissions (g CO₂)
+  - Water equivalent (L)
+- **Annual Projections**: Understand long-term impact based on your traffic
+- **Green Hosting Detection**: Identify if your site uses eco-friendly hosting
 
 ## Getting Started
 
-First, run the development server:
+1. Visit [CO2 Bunny](https://bunny.srijit.co)
+2. Enter your website URL
+3. Input your estimated annual page views
+4. Get instant insights about your site's environmental impact
+
+## Local Development
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/co2-bunny.git
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- CO2 Bunny API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest features
+- Submit pull requests
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MIT License - feel free to use and modify the code as needed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with 💚 for a greener web

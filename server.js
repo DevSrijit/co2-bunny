@@ -24,7 +24,8 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: "." });
+  // Permanent redirect (301) to indicate this is the canonical URL
+  res.status(301).redirect("https://co2bunny.srijit.co");
 });
 
 app.get("/api/impact/data-transfer", async (req, res) => {

@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 // Add CORS middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://co2bunny.srijit.org'], // Add your frontend URLs
+  origin: ['http://localhost:3000', 'https://co2bunny.srijit.org'], // frontend URLs
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));

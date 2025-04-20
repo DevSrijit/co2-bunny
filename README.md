@@ -216,4 +216,4 @@ The API currently does not implement rate limiting. Have fun with it.
 
 ## Caching
 
-Analyses are cached on an M10 cluster Database. Requesting an analysis for the same URL and annual page views contained in the Database will return the cached analysis. Future plans include using MongoDB Charts to create cool analytics. That's why I'm hoarding the data.
+Analyses are cached on a postgres database. Requesting an analysis for the same URL and annual page views contained in the Database will return the cached analysis.

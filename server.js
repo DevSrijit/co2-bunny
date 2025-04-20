@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 // Add CORS middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://co2bunny.srijit.co'], // Add your frontend URLs
+  origin: ['http://localhost:3000', 'https://co2bunny.srijit.org'], // Add your frontend URLs
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 
 app.get("/", (req, res) => {
   // Permanent redirect (301) to indicate this is the canonical URL
-  res.status(301).redirect("https://co2bunny.srijit.co");
+  res.status(301).redirect("https://co2bunny.srijit.org");
 });
 
 app.get("/api/impact/data-transfer", async (req, res) => {

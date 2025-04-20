@@ -26,7 +26,7 @@ CO2 Bunny is a free tool that analyzes websites to measure their carbon emission
 
 ## Getting Started
 
-1. Visit [CO2 Bunny](https://bunny.srijit.co)
+1. Visit [CO2 Bunny](https://bunny.srijit.org)
 2. Enter your website URL
 3. Input your estimated annual page views
 4. Get instant insights about your site's environmental impact

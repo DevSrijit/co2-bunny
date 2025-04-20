@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = 'https://bunny.srijit.co/api'
+const API_BASE_URL = 'https://bunny.srijit.org/api'
 
 export const api = {
   async calculateImpact(url: string, annualPageViews: number) {

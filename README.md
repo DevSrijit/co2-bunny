@@ -5,7 +5,7 @@ CO2 Bunny is a RESTful API service that analyzes and calculates the carbon footp
 ## Base URL
 
 ```
-https://bunny.srijit.co
+https://bunny.srijit.org
 ```
 
 ## API Endpoints

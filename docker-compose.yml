@@ -5,19 +5,29 @@ services:
       - "7865:7865"
     restart: always
     environment:
-      - DATABASE_URL=mongodb://mongodb:27017/co2bunny
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/co2bunny
       - PORT=7865
       - host=http://localhost:7865
     depends_on:
-      - mongodb
+      postgres:
+        condition: service_healthy
 
-  mongodb:
-    image: mongo:latest
+  postgres:
+    image: postgres:14
     ports:
-      - "27017:27017"
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=co2bunny
     volumes:
-      - mongodb_data:/data/db
+      - postgres_data:/var/lib/postgresql/data
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 volumes:
-  mongodb_data:
+  postgres_data:

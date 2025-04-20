@@ -3,20 +3,20 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model WebsiteAnalysis {
-  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
-  url                String
-  dataTransferKB     Float
-  energyUsedKWh      Float
-  carbonEmissionsG   Json
-  greenHosting       Boolean
-  provider           String?
-  annualPageViews    Int
-  carbonPerViewG     Float
+  id                     Int      @id @default(autoincrement())
+  url                    String
+  dataTransferKB         Float
+  energyUsedKWh          Float
+  carbonEmissionsG       Json
+  greenHosting           Boolean
+  provider               String?
+  annualPageViews        Int
+  carbonPerViewG         Float
   totalAnnualEmissionsKg Float
-  createdAt          DateTime @default(now())
+  createdAt              DateTime @default(now())
 }

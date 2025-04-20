@@ -9,11 +9,17 @@ const app = express();
 const prisma = new PrismaClient();
 
 // Add CORS middleware
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://co2bunny.srijit.org', "https://bunny.srijit.org"], // frontend URLs
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://co2bunny.srijit.org",
+      "https://bunny.srijit.org",
+    ], // frontend URLs
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 app.use(express.json());
 
